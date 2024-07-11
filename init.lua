@@ -11,3 +11,27 @@ vim.o.tabstop = 4
 vim.o.expandtab = true
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
+
+-- increase the time before whichkey pops up
+vim.o.timeoutlen = 1000
+
+-- show hidden files in neo tree
+require('neo-tree').setup{
+    filesystem = {
+        filtered_items = {
+            hide_dotfiles = false,
+            hide_gitignored = false,
+            hide_hidden = false
+        },
+    }
+}
+
+--tab auto complete
+
+local cmp = require'cmp'
+
+cmp.setup({
+    mapping = {
+       ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+    }
+})
