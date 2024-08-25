@@ -4,20 +4,8 @@ require("config.lazy")
 -- colourscheme
 vim.cmd("colorscheme wildcharm")
 
--- styling cuz im dumb and dont really know what im doing with this conifg
 -- increase the time before whichkey pops up
 vim.o.timeoutlen = 1400
-
--- show hidden files in neo tree
-require('neo-tree').setup{
-    filesystem = {
-        filtered_items = {
-            hide_dotfiles = false,
-            hide_gitignored = false,
-            hide_hidden = false
-        },
-    }
-}
 
 --tab auto complete
 
