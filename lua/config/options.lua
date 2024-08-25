@@ -3,8 +3,7 @@
 -- Add any additional options hereby
 vim.g.autoformat = false
 
-vim.g.lazyvim_python_lsp = "pyright"
-vim.g.lazyvim_python_ruff = "ruff"
+vim.g.lazyvim_python_lsp = "basedpyright"
 
 vim.o.tabstop = 4
 vim.o.expandtab = true
