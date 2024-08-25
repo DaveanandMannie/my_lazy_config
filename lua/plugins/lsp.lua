@@ -1,25 +1,40 @@
 return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = function()
-      local lspconfig = require('lspconfig')
-      lspconfig.basedpyright.setup {
-        settings = {
-          python = {
-            analysis = {
-              inlayHints = {
-                variableTypes = false,
-                functionReturnTypes = false,
-              },
+  "williamboman/mason-lspconfig.nvim",
+  config = function()
+    require("mason-lspconfig").setup({
+      -- Configure which LSP servers to automatically install
+      ensure_installed = {
+                "basedpyright",
+                "flake8",
+                "json-lsp",
+                "lua-language-server",
+                "marksman",
+                "ruff",
+                "shfmt",
+                "sylua"
             },
-          },
-        },
-        on_attach = function(client, bufnr)
-          if client.server_capabilities.inlayHintProvider then
-            vim.lsp.buf.inlay_hint(bufnr, false)
-          end
-        end,
+    })
+
+    local lspconfig = require("lspconfig")
+
+    -- Disable inlay hints for basedpyright
+    lspconfig.basedpyright.setup({
+      settings = {
+        python = {
+          analysis = {
+            inlayHints = {
+              enabled = false
+            }
+          }
+        }
       }
-    end,
+    })
+  end,
+---  idk but this fixed it lol
+{
+  "neovim/nvim-lspconfig",
+  opts = {
+    inlay_hints = { enabled = false },
   },
+}
 }
