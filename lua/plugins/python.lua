@@ -8,6 +8,21 @@ return {
     opts = {
       inlay_hints = { enabled = false },
       servers = {
+        ruff = {
+        cmd_env = { RUFF_TRACE = "messages" },
+        init_options = {
+            settings = {
+            logLevel = "error",
+            },
+        },
+        keys = {
+            {
+            "<leader>co",
+            LazyVim.lsp.action["source.organizeImports"],
+            desc = "Organize Imports",
+            },
+        },
+        },
         basedpyright = {
           cmd_env = { RUFF_TRACE = "messages" },
           init_options = {
@@ -29,7 +44,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = function(_, opts)
-      local servers = { "basedpyright", "ruff" }
+      local servers = { "basedpyright" }
       for _, server in ipairs(servers) do
         opts.servers[server] = opts.servers[server] or {}
         opts.servers[server].enabled = server == "basedpyright"
