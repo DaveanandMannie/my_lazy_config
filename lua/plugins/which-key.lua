@@ -6,7 +6,7 @@ return {
 
       wk.add(
           {
-            { "<leader><leader>cL", ":LspRestart<CR>", desc = "Restart  LSP"},
+            { "<leader>cL", ":LspRestart<CR>", desc = "Restart LSP", icon= "↺"},
           }
         )
     end,
