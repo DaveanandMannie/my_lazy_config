@@ -5,20 +5,20 @@ return {
       inlay_hints = { enabled = false },
       servers = {
         ruff = {
-        cmd_env = { RUFF_TRACE = "messages" },
-        init_options = {
+          cmd_env = { RUFF_TRACE = "messages" },
+          init_options = {
             settings = {
-            logLevel = "error",
-            configuration = os.getenv("LOCALAPPDATA") .. "/nvim/ruff.toml"
+              logLevel = "error",
+              configuration = os.getenv("LOCALAPPDATA") .. "/nvim/ruff.toml",
             },
-        },
-        keys = {
+          },
+          keys = {
             {
-            "<leader>co",
-            LazyVim.lsp.action["source.organizeImports"],
-            desc = "Organize Imports",
+              "<leader>co",
+              LazyVim.lsp.action["source.organizeImports"],
+              desc = "Organize Imports",
             },
-        },
+          },
         },
         basedpyright = {
           cmd_env = { RUFF_TRACE = "messages" },
@@ -41,7 +41,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = function(_, opts)
-      local servers = { "basedpyright", "ruff"}
+      local servers = { "basedpyright", "ruff" }
       for _, server in ipairs(servers) do
         opts.servers[server] = opts.servers[server] or {}
         opts.servers[server].enabled = server == "basedpyright" or server == "ruff"
@@ -71,8 +71,22 @@ return {
       "mfussenegger/nvim-dap-python",
     },
     keys = {
-      { "<leader>dPt", function() require('dap-python').test_method() end, desc = "Debug Method", ft = "python" },
-      { "<leader>dPc", function() require('dap-python').test_class() end, desc = "Debug Class", ft = "python" },
+      {
+        "<leader>dPt",
+        function()
+          require("dap-python").test_method()
+        end,
+        desc = "Debug Method",
+        ft = "python",
+      },
+      {
+        "<leader>dPc",
+        function()
+          require("dap-python").test_class()
+        end,
+        desc = "Debug Class",
+        ft = "python",
+      },
     },
     config = function()
       if vim.fn.has("win32") == 1 then
