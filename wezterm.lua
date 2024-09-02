@@ -3,17 +3,17 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 -- workspace dir default
-config.default_cwd = 'C:/Users/support/Desktop/workspace'
+config.default_cwd = "C:/Users/support/Desktop/workspace"
 
 --styles
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.font = wezterm.font("JetBrains Mono", { weight = "Bold" })
 config.color_scheme = "Sakura"
 config.window_padding = {
-  left = '2cell',
-  right = '2cell',
-  top = '1cell',
-  bottom = '1cell',
+  left = "2cell",
+  right = "2cell",
+  top = "1cell",
+  bottom = "1cell",
 }
 
 --window size
@@ -27,8 +27,8 @@ config.text_background_opacity = 0.2
 --key map
 local act = wezterm.action
 config.keys = {
-    { key = 'l', mods = 'ALT', action = act.ActivateTabRelative(1) },
-    { key = 'h', mods = 'ALT', action = act.ActivateTabRelative(-1) },
+  { key = "l", mods = "ALT", action = act.ActivateTabRelative(1) },
+  { key = "h", mods = "ALT", action = act.ActivateTabRelative(-1) },
 }
 
 return config
