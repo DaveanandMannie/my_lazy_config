@@ -9,3 +9,18 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.shiftwidth = 2
   end,
 })
+
+local cmp = require("cmp")
+
+cmp.setup({
+  mapping = {
+    ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+    ["<CR>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.confirm({ select = false })
+      else
+        fallback() -- Insert a new line if completion is not visible
+      end
+    end, { "i", "s" }), -- 'i' for insert mode, 's' for select mode
+  },
+})
