@@ -3,8 +3,7 @@ require("nvim-treesitter.install").prefer_git = false
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    build = function()
-    end,
+    build = function() end,
     opts = {
       highlight = { enable = true },
       indent = { enable = true },
