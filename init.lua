@@ -9,6 +9,3 @@ vim.o.shellquote = ""
 vim.o.shellxquote = ""
 -- colourscheme
 vim.cmd("colorscheme wildcharm")
-
--- increase the time before whichkey pops up
-vim.o.timeoutlen = 1400

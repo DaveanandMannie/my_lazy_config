@@ -1,14 +1,13 @@
 return {
   {
     "folke/which-key.nvim",
-    config = function()
-      local wk = require("which-key")
-
-      wk.add(
-          {
-            { "<leader>cL", ":LspRestart<CR>", desc = "Restart LSP", icon= "↺"},
-          }
-        )
-    end,
+    opts = {
+      spec = {
+        { "<leader>cL", "<cmd>LspRestart<CR>", icon = "🔄" },
+      },
+      win = {
+        no_overlap = false,
+      },
+    },
   },
 }
