@@ -53,13 +53,19 @@ select = [
     "I",
     # pep8-naming
     "N",
-    # pycodestyle
-    # "D",
-    # "TD",
+    # flake8-annotations
+    "ANN",
+    # pylint
+    "PL"
 ]
 ignore = [
     "N812",
-    "SIM108"
+    "SIM108",
+    "ANN101",
+    "ANN201",
+    "ANN202",
+    "ANN205",
+    "ANN204"
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
