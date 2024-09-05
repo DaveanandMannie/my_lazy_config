@@ -4,7 +4,8 @@ return {
     "nvim-lua/plenary.nvim",
     {
       "nvim-telescope/telescope-fzf-native.nvim",
-      build = "zig build-lib -dynamic -O ReleaseSafe -target x86_64-windows-gnu src/fzf.c -lc -femit-bin=./build/libfzf.dll",
+      build = "zig build-lib -dynamic -O ReleaseSafe -target x86_64-linux-gnu src/fzf.c -lc -femit-bin=./build/libfzf.so"
+      ,
     },
     "nvim-tree/nvim-web-devicons",
   },

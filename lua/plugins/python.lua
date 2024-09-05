@@ -9,7 +9,7 @@ return {
           init_options = {
             settings = {
               logLevel = "error",
-              configuration = os.getenv("LOCALAPPDATA") .. "/nvim/ruff.toml",
+              configuration = "~.config/nvim/ruff.toml",
             },
           },
           keys = {
