@@ -1,4 +1,4 @@
-# add to ~/appdata/.config/lsd/config.yaml
+# add to ~/.config/lsd/config.yaml
 layout: tree
 recursion:
   enabled: true
