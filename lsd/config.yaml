@@ -1,0 +1,13 @@
+# add to ~/appdata/.config/lsd/config.yaml
+layout: tree
+recursion:
+  enabled: true
+  depth: 2
+total-size: true
+indicators: true
+blocks:
+  - permission
+  - size
+  - date
+  - name
+
