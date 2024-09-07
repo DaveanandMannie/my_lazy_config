@@ -1,11 +1,35 @@
 #### Don't forget to add this to the the profile default location is $PROFILE
-Write-Output "Hello Daveanand"
+function Write-Display-Header
+{
+    param (
+        [string]$HeaderText = "Hello",
+        [ConsoleColor]$HeaderTextColor = [ConsoleColor]::Magenta
+    )
+    $HeaderText = "💻 Hello Daveanand 💻"
 
+    # Get terminal width
+    $width = $host.UI.RawUI.WindowSize.Width
+
+    # Create the header line and padding
+    $line = "=" * $width
+    $padding = [math]::Max(0, ($width - $HeaderText.Length) / 2)
+    
+    # Print the header line with `=` characters
+    Write-Host $line
+
+    # Print the header text centered
+    Write-Host (" " * $padding) -NoNewline
+    Write-Host $HeaderText -ForegroundColor $HeaderTextColor -NoNewline
+    Write-Host (" " * $padding)
+
+    # Print the bottom line
+    Write-Host $line
+}
 function Show-LoadingWheel
 {
-    $duration = 1
+    $duration = 2
     # Define spinner characters
-    $spinnerChars = @('|', '/', '-', '\')
+    $spinnerChars = @('|', '/', '', '\')
 
     $delay = 25 # Adjust this value for spinner speed
 
@@ -22,7 +46,7 @@ function Show-LoadingWheel
         {
             # Clear the current line and display the spinner character
             $host.UI.RawUI.CursorPosition = @{X=0;Y=$host.UI.RawUI.CursorPosition.Y}
-            Write-Host -NoNewline "$char $char $char $char $char $char"
+            Write-Host -NoNewline "$char $char $char $char $char $char" -ForegroundColor Magenta
 
             # Break the loop if the total elapsed time exceeds the duration
             if ((Get-Date) -gt $startTime.AddSeconds($duration))
@@ -34,9 +58,11 @@ function Show-LoadingWheel
 
     # Clear the spinner character after the loading is done
     $host.UI.RawUI.CursorPosition = @{X=0;Y=$host.UI.RawUI.CursorPosition.Y}
-    Write-Host -NoNewline "               " | Out-Null
+    Write-Host "                  " | Out-Null
 }
+######### execution ###############
 Show-LoadingWheel | Out-Null
+Write-Display-Header
 
 ##################### Aliases #############################
 
