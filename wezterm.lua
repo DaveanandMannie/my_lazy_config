@@ -4,6 +4,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 -- workspace dir default
 config.default_cwd = "C:/Users/support/Desktop/workspace"
+-- default term prog can be changed with cli args
 config.default_prog = { "C:/Program Files/PowerShell/7/pwsh.exe" , '-nologo'}
 
 --styles
@@ -11,10 +12,10 @@ config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.font = wezterm.font("JetBrains Mono", { weight = "Bold" })
 config.color_scheme = "Sakura"
 config.window_padding = {
-  left = "2cell",
-  right = "2cell",
-  top = "1cell",
-  bottom = "1cell",
+  left = "0.5cell",
+  right = "0.5cell",
+  top = "0cell",
+  bottom = "0cell",
 }
 
 --window size
