@@ -1,37 +1,24 @@
 #### Don't forget to add this to the the profile default location is $PROFILE
 function Write-Display-Header
 {
-    param (
-        [string]$HeaderText = "Hello",
-        [ConsoleColor]$HeaderTextColor = [ConsoleColor]::Magenta
-    )
     $HeaderText = "💻 Hello Daveanand 💻"
 
-    # Get terminal width
     $width = $host.UI.RawUI.WindowSize.Width
 
     # Create the header line and padding
     $line = "=" * $width
     $padding = [math]::Max(0, ($width - $HeaderText.Length) / 2)
-    
-    # Print the header line with `=` characters
     Write-Host $line
-
-    # Print the header text centered
     Write-Host (" " * $padding) -NoNewline
-    Write-Host $HeaderText -ForegroundColor $HeaderTextColor -NoNewline
+    Write-Host $HeaderText -ForegroundColor Magenta -NoNewline
     Write-Host (" " * $padding)
-
-    # Print the bottom line
     Write-Host $line
 }
 function Show-LoadingWheel
 {
-    $duration = 2
-    # Define spinner characters
-    $spinnerChars = @('|', '/', '', '\')
-
-    $delay = 25 # Adjust this value for spinner speed
+    $duration = 1
+    $spinnerChars = @('|', '/', '-', '\')
+    $delay = 75
 
     # Calculate the number of iterations based on the duration and spinner delay
     $iterations = [math]::Ceiling(($duration * 1000) / $delay)
@@ -53,6 +40,7 @@ function Show-LoadingWheel
             {
                 break
             }
+            Start-Sleep -Milliseconds $delay
         }
     }
 
@@ -60,11 +48,11 @@ function Show-LoadingWheel
     $host.UI.RawUI.CursorPosition = @{X=0;Y=$host.UI.RawUI.CursorPosition.Y}
     Write-Host "                  " | Out-Null
 }
-######### execution ###############
+# =================== execution =================== #
 Show-LoadingWheel | Out-Null
 Write-Display-Header
 
-##################### Aliases #############################
+#==================== Aliases ===========================#
 
 function lsd
 {
