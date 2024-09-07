@@ -4,6 +4,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 -- workspace dir default
 config.default_cwd = "C:/Users/support/Desktop/workspace"
+config.default_prog = { "C:/Program Files/PowerShell/7/pwsh.exe" , '-nologo'}
 
 --styles
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
