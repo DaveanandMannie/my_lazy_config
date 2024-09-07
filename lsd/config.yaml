@@ -1,4 +1,7 @@
-# add to ~/.config/lsd/config.yaml
+# Add this function to $PROFILE in powershell
+# function lsd {
+#    C:\Users\support\scoop\apps\lsd\current\lsd.exe --config-file C:\Users\support\AppData\Local\nvim\lsd\config.yaml @Args
+# }
 layout: tree
 recursion:
   enabled: true
