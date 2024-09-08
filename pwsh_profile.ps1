@@ -53,13 +53,6 @@ Show-LoadingWheel | Out-Null
 Write-Display-Header
 
 #==================== Aliases ===========================#
-
-function lsd
-{
-    C:\Users\support\scoop\apps\lsd\current\lsd.exe --config-file C:\Users\support\AppData\Local\nvim\lsd\config.yaml @Args
-}
-
-
 function sudo
 {
     param

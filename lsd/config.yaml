@@ -5,12 +5,12 @@
 layout: tree
 recursion:
   enabled: true
-  depth: 2
+  depth: 1
 total-size: true
 indicators: true
-blocks:
-  - permission
-  - size
-  - date
-  - name
+# blocks:
+#   - permission
+#   - size
+#   - date
+#   - name
 
