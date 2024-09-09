@@ -98,7 +98,7 @@ return {
   },
   {
     "linux-cultist/venv-selector.nvim",
-    branch = "regexp",
+    branch = "windows_lua_table",
     cmd = "VenvSelect",
     enabled = function()
       return LazyVim.has("telescope.nvim")
