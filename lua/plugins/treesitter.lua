@@ -18,6 +18,7 @@ return {
         "gomod",
         "gowork",
         "gosum",
+        --
         "toml",
         "json",
         "html",
