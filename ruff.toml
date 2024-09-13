@@ -56,7 +56,8 @@ select = [
     # flake8-annotations
     "ANN",
     # pylint
-    "PL"
+    "PL",
+    "ARG"
 ]
 ignore = [
     "N812",
