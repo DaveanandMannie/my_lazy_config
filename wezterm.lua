@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 -- workspace dir default
 config.default_cwd = "C:/Users/support/Desktop/workspace"
 -- default term prog can be changed with cli args
-config.default_prog = { "C:/Program Files/PowerShell/7/pwsh.exe" , '-nologo'}
+config.default_prog = { "C:/Program Files/PowerShell/7/pwsh.exe", "-nologo" }
 
 --styles
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
@@ -31,6 +31,7 @@ local act = wezterm.action
 config.keys = {
   { key = "l", mods = "ALT", action = act.ActivateTabRelative(1) },
   { key = "h", mods = "ALT", action = act.ActivateTabRelative(-1) },
+  { key = "f", mods = "ALT", action = act.ToggleFullScreen },
 }
 
 return config
