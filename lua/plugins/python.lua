@@ -105,6 +105,10 @@ return {
     end,
     opts = {
       settings = {
+        search = {
+          -- windows escaping sucks 
+          cwd = { command = "$FD Scripts//python.exe$ $CWD --full-path --color never -HI -a -L" },
+        },
         options = {
           notify_user_on_venv_activation = true,
         },
