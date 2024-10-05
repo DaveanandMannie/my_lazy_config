@@ -1,4 +1,5 @@
 {
     "reportUnusedVariable": false,
-    "reportUnusedImport": false
+    "reportUnusedImport": false,
+    "reportUnusedParameter": false
 }
