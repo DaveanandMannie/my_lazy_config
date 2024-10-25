@@ -18,6 +18,9 @@ config.window_padding = {
   bottom = "0cell",
 }
 
+--tab bar
+config.hide_tab_bar_if_only_one_tab = true
+
 --window size
 config.initial_rows = 32
 config.initial_cols = 129
