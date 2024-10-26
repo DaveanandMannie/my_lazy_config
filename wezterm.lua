@@ -28,7 +28,7 @@ config.initial_cols = 129
 --tansparent
 local is_transparent = true
 config.window_background_opacity = 0.8
-config.text_background_opacity = 0.2
+config.text_background_opacity = 0.4
 
 --key map
 local act = wezterm.action
@@ -52,7 +52,7 @@ config.keys = {
         -- Set to transparent
         window:set_config_overrides({
           window_background_opacity = 0.8,
-          text_background_opacity = 0.2,
+          text_background_opacity = 0.4,
         })
         is_transparent = true
       end
