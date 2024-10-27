@@ -106,7 +106,7 @@ return {
     opts = {
       settings = {
         search = {
-          -- windows escaping sucks 
+          -- windows escaping sucks
           cwd = { command = "$FD Scripts//python.exe$ $CWD --full-path --color never -HI -a -L" },
         },
         options = {
