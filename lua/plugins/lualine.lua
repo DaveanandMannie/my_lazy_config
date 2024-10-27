@@ -52,18 +52,7 @@ return {
         section_separators = { left = "", right = "" },
       },
       sections = {
-        lualine_a = {
-          { "mode", separator = { left = "" }, right_padding = 2 },
-          {
-            function()
-              return require("noice").api.status.command.get()
-            end,
-            cond = function()
-              return package.loaded["noice"] and require("noice").api.status.command.has()
-            end,
-            color = { colors.black },
-          },
-        },
+        lualine_a = {{ "mode", separator = { left = "" }, right_padding = 2 }},
         lualine_b = {
           "branch",
           {
@@ -105,6 +94,26 @@ return {
         lualine_y = {
           "encoding",
           "progress",
+          {
+            function()
+              return require("noice").api.status.mode.get()
+            end,
+            cond = function()
+              return package.loaded["noice"] and require("noice").api.status.mode.has()
+            end,
+            color = function()
+              return LazyVim.ui.fg("Constant")
+            end,
+          },
+          {
+            function()
+              return require("noice").api.status.command.get()
+            end,
+            cond = function()
+              return package.loaded["noice"] and require("noice").api.status.command.has()
+            end,
+            color = { colors.black },
+          },
         },
         lualine_z = {
           { "location", separator = { right = "" }, left_padding = 2 },
