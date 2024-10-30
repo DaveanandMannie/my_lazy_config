@@ -10,6 +10,7 @@ return {
             settings = {
               logLevel = "error",
               configuration = os.getenv("LOCALAPPDATA") .. "/nvim/ruff.toml",
+              configurationPreference = "filesystemFirst"
             },
           },
           keys = {
