@@ -3,7 +3,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 -- workspace dir default
-config.default_cwd = "C:/Users/support/workspace"
+config.default_cwd = "E:/"
 -- default term prog can be changed with cli args
 config.default_prog = { "C:/Program Files/PowerShell/7/pwsh.exe", "-nologo" }
 
