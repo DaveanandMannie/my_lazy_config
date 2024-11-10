@@ -9,3 +9,4 @@ vim.o.shellquote = ""
 vim.o.shellxquote = ""
 -- colourscheme
 vim.cmd("colorscheme wildcharm")
+vim.api.nvim_set_hl(0, "Normal", { bg = "#18131e" })
