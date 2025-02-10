@@ -3,162 +3,197 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2024-11-01T18:42:11-04:00",
-            "Manifests": 1344
+            "Updated": "2025-02-09T15:25:58-05:00",
+            "Manifests": 1357
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2024-11-01T16:31:41-04:00",
-            "Manifests": 2094
+            "Updated": "2025-02-09T17:18:40-05:00",
+            "Manifests": 2127
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
-            "Updated": "2024-10-28T08:43:19-04:00",
-            "Manifests": 342
+            "Updated": "2025-02-07T22:51:32-05:00",
+            "Manifests": 345
         }
     ],
     "apps": [
         {
-            "Info": "",
-            "Version": "24.08",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-09-09T11:36:08.5111886-04:00",
             "Name": "7zip",
-            "Updated": "2024-09-09T11:36:08.5111886-04:00"
+            "Version": "24.08"
         },
         {
-            "Info": "",
-            "Version": "0.14.0",
             "Source": "extras",
+            "Info": "",
+            "Updated": "2024-11-01T19:34:38.3778404-04:00",
             "Name": "alacritty",
-            "Updated": "2024-11-01T19:34:38.3778404-04:00"
+            "Version": "0.14.0"
         },
         {
+            "Source": "extras",
             "Info": "",
-            "Version": "3.14",
+            "Updated": "2025-02-09T17:23:32.7867865-05:00",
+            "Name": "bitwarden",
+            "Version": "2025.1.4"
+        },
+        {
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-07-04T01:17:57.9121451-04:00",
             "Name": "dark",
-            "Updated": "2024-07-04T01:17:57.9121451-04:00"
+            "Version": "3.14"
         },
         {
-            "Info": "",
-            "Version": "10.2.0",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-09-09T11:36:12.5176222-04:00",
             "Name": "fd",
-            "Updated": "2024-09-09T11:36:12.5176222-04:00"
+            "Version": "10.2.0"
         },
         {
-            "Info": "",
-            "Version": "0.56.0",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-11-01T19:34:40.2062145-04:00",
             "Name": "fzf",
-            "Updated": "2024-11-01T19:34:40.2062145-04:00"
+            "Version": "0.56.0"
         },
         {
-            "Info": "",
-            "Version": "1.23.2",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-10-01T17:03:13.1604702-04:00",
             "Name": "go",
-            "Updated": "2024-10-01T17:03:13.1604702-04:00"
+            "Version": "1.23.2"
         },
         {
+            "Source": "main",
             "Info": "",
-            "Version": "2.304",
+            "Updated": "2025-01-22T10:03:39.9124094-05:00",
+            "Name": "imagemagick",
+            "Version": "7.1.1-43"
+        },
+        {
+            "Source": "main",
+            "Info": "",
+            "Updated": "2025-01-22T10:03:24.5153293-05:00",
+            "Name": "innounp",
+            "Version": "1.76"
+        },
+        {
             "Source": "nerd-fonts",
+            "Info": "",
+            "Updated": "2024-07-03T12:03:35.3347584-04:00",
             "Name": "JetBrains-Mono",
-            "Updated": "2024-07-03T12:03:35.3347584-04:00"
+            "Version": "2.304"
         },
         {
-            "Info": "",
-            "Version": "0.44.1",
             "Source": "extras",
+            "Info": "",
+            "Updated": "2024-09-18T16:53:33.5012064-04:00",
             "Name": "lazygit",
-            "Updated": "2024-09-18T16:53:33.5012064-04:00"
+            "Version": "0.44.1"
         },
         {
-            "Info": "",
-            "Version": "19.1.3",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-11-01T19:35:48.4703135-04:00",
             "Name": "llvm",
-            "Updated": "2024-11-01T19:35:48.4703135-04:00"
+            "Version": "19.1.3"
         },
         {
-            "Info": "",
-            "Version": "1.1.5",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-09-05T16:46:00.174889-04:00",
             "Name": "lsd",
-            "Updated": "2024-09-05T16:46:00.174889-04:00"
+            "Version": "1.1.5"
         },
         {
-            "Info": "",
-            "Version": "5.4.7-2",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-09-09T11:39:07.0301924-04:00",
             "Name": "lua",
-            "Updated": "2024-09-09T11:39:07.0301924-04:00"
+            "Version": "5.4.7-2"
         },
         {
-            "Info": "",
-            "Version": "3.11.1",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-07-02T13:43:36.9378971-04:00",
             "Name": "luarocks",
-            "Updated": "2024-07-02T13:43:36.9378971-04:00"
+            "Version": "3.11.1"
         },
         {
-            "Info": "",
-            "Version": "14.2.0-rt_v12-rev0",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-09-09T11:41:16.5981167-04:00",
             "Name": "mingw",
-            "Updated": "2024-09-09T11:41:16.5981167-04:00"
+            "Version": "14.2.0-rt_v12-rev0"
         },
         {
-            "Info": "",
-            "Version": "0.10.2",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-11-01T19:36:09.7309676-04:00",
             "Name": "neovim",
-            "Updated": "2024-11-01T19:36:09.7309676-04:00"
+            "Version": "0.10.2"
         },
         {
-            "Info": "",
-            "Version": "23.1.0",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-11-01T19:36:43.4336921-04:00",
             "Name": "nodejs",
-            "Updated": "2024-11-01T19:36:43.4336921-04:00"
+            "Version": "23.1.0"
         },
         {
-            "Info": "",
-            "Version": "3.13.0",
             "Source": "main",
-            "Name": "python",
-            "Updated": "2024-11-01T19:38:01.1376669-04:00"
+            "Info": "",
+            "Updated": "2025-01-31T23:59:54.9114723-05:00",
+            "Name": "ollama",
+            "Version": "0.5.7"
         },
         {
-            "Info": "",
-            "Version": "14.1.1",
-            "Source": "main",
-            "Name": "ripgrep",
-            "Updated": "2024-09-09T11:41:57.6071607-04:00"
-        },
-        {
-            "Info": "",
-            "Version": "6.00",
-            "Source": "main",
-            "Name": "unzip",
-            "Updated": "2024-07-03T23:27:10.7278254-04:00"
-        },
-        {
-            "Info": "",
-            "Version": "20240203-110809-5046fc22",
             "Source": "extras",
-            "Name": "wezterm",
-            "Updated": "2024-07-03T20:06:17.971977-04:00"
+            "Info": "",
+            "Updated": "2025-02-01T00:03:59.1209205-05:00",
+            "Name": "ollama-full",
+            "Version": "0.5.7"
         },
         {
-            "Info": "",
-            "Version": "0.13.0",
             "Source": "main",
+            "Info": "",
+            "Updated": "2024-10-01T17:04:33.0075698-04:00",
+            "Name": "python",
+            "Version": "3.12.7"
+        },
+        {
+            "Source": "main",
+            "Info": "",
+            "Updated": "2024-09-09T11:41:57.6071607-04:00",
+            "Name": "ripgrep",
+            "Version": "14.1.1"
+        },
+        {
+            "Source": "main",
+            "Info": "",
+            "Updated": "2024-07-03T23:27:10.7278254-04:00",
+            "Name": "unzip",
+            "Version": "6.00"
+        },
+        {
+            "Source": "extras",
+            "Info": "",
+            "Updated": "2024-07-03T20:06:17.971977-04:00",
+            "Name": "wezterm",
+            "Version": "20240203-110809-5046fc22"
+        },
+        {
+            "Source": "main",
+            "Info": "",
+            "Updated": "2024-09-02T19:37:17.1832372-04:00",
             "Name": "zig",
-            "Updated": "2024-09-02T19:37:17.1832372-04:00"
+            "Version": "0.13.0"
         }
     ]
 }
