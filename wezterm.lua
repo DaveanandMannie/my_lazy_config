@@ -27,7 +27,7 @@ config.initial_cols = 129
 
 --tansparent
 local is_transparent = true
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.65
 config.text_background_opacity = 0.4
 
 --key map
@@ -51,7 +51,7 @@ config.keys = {
       else
         -- Set to transparent
         window:set_config_overrides({
-          window_background_opacity = 0.8,
+          window_background_opacity = 0.65,
           text_background_opacity = 0.4,
         })
         is_transparent = true
