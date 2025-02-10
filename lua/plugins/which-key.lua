@@ -8,6 +8,7 @@ return {
       win = {
         no_overlap = false,
       },
+      preset = 'modern'
     },
   },
 }

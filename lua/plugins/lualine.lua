@@ -1,6 +1,6 @@
 return {
   "nvim-lualine/lualine.nvim",
-  event = "VeryLazy",
+  event = "VimEnter",
   init = function()
     vim.g.lualine_laststatus = vim.o.laststatus
     if vim.fn.argc(-1) > 0 then
@@ -46,13 +46,13 @@ return {
     return {
       options = {
         theme = bubbles_theme,
-        globalstatus = vim.o.laststatus == 3,
-        disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter" } },
+        -- globalstatus = vim.o.laststatus == 3,
+        -- disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter" } },
         component_separators = "",
         section_separators = { left = "", right = "" },
       },
       sections = {
-        lualine_a = {{ "mode", separator = { left = "" }, right_padding = 2 }},
+        lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
         lualine_b = {
           "branch",
           {
@@ -102,7 +102,7 @@ return {
               return package.loaded["noice"] and require("noice").api.status.mode.has()
             end,
             color = function()
-              return LazyVim.ui.fg("Constant")
+              return { fg = Snacks.util.color("Constant") }
             end,
           },
           {
