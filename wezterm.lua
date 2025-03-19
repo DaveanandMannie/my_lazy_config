@@ -1,5 +1,4 @@
--- need to to set env var WEZTERM_CONFIG_FILE to this file
---FOR THE THE LOVE OF GOD READ THIS DAVE
+--WARNING: need to to set env var WEZTERM_CONFIG_FILE to this file
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 -- workspace dir default
@@ -20,6 +19,7 @@ config.window_padding = {
 
 --tab bar
 config.hide_tab_bar_if_only_one_tab = true
+config.tab_bar_at_bottom = true
 
 --window size
 config.initial_rows = 32

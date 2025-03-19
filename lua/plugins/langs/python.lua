@@ -35,6 +35,7 @@ return {
           LazyVim.lsp.on_attach(function(client, _)
             client.server_capabilities.hoverProvider = true
           end, "basedpyright")
+          vim.api.nvim_set_hl(0, "@lsp.type.decorator.python", { link = "Normal" })
         end,
       },
     },
