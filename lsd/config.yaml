@@ -1,16 +1,7 @@
-# Add this function to $PROFILE in powershell
-# function lsd {
-#    C:\Users\support\scoop\apps\lsd\current\lsd.exe --config-file C:\Users\support\AppData\Local\nvim\lsd\config.yaml @Args
-# }
+header: true
 layout: tree
 recursion:
   enabled: true
   depth: 1
 total-size: true
 indicators: true
-# blocks:
-#   - permission
-#   - size
-#   - date
-#   - name
-
