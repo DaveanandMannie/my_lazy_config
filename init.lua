@@ -16,3 +16,39 @@ end
 -- colourscheme
 vim.cmd("colorscheme wildcharm")
 vim.api.nvim_set_hl(0, "Normal", { bg = "#18131e" })
+
+-- clipboard
+
+if vim.fn.has("wsl") == 1 then
+  -- WSL-specific clipboard configuration
+  vim.cmd([[
+    let g:clipboard = {
+    \   'name': 'WslClipboard',
+    \   'copy': {
+    \      '+': 'clip.exe',
+    \      '*': 'clip.exe',
+    \    },
+    \   'paste': {
+    \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    \   },
+    \   'cache_enabled': 0,
+    \ }
+  ]])
+elseif vim.fn.has("unix") == 1 then
+  -- Native Linux-specific clipboard configuration
+  vim.cmd([[
+    let g:clipboard = {
+    \   'name': 'LinuxClipboard',
+    \   'copy': {
+    \      '+': 'xclip -selection clipboard',
+    \      '*': 'xclip -selection primary',
+    \    },
+    \   'paste': {
+    \      '+': 'xclip -selection clipboard -o',
+    \      '*': 'xclip -selection primary -o',
+    \   },
+    \   'cache_enabled': 0,
+    \ }
+  ]])
+end
