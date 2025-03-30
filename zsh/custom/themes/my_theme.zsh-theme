@@ -22,8 +22,8 @@ fi
 
 # Characters
 SEGMENT_SEPARATOR=""
-PLUSMINUS="\u00b1"
-BRANCH="\ue0a0"
+PLUSMINUS="󰃻"
+BRANCH="󰘬"
 DETACHED="\u27a6"
 CROSS="\u2718"
 LIGHTNING="\u26a1"
@@ -64,8 +64,8 @@ prompt_context() {
   local user=`whoami`
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CONNECTION" ]]; then
-    prompt_segment $PRIMARY_FG $PRIMARY_FG " "
-    prompt_segment $PRIMARY_FG green "%(!.%{%F{yellow}%}.)$user@%m "
+    prompt_segment NONE $PRIMARY_FG ""
+    prompt_segment $PRIMARY_FG green " %(!.%{%F{yellow}%}.)$user@%m "
   fi
   PROMPT='%{%f%b%k%}$(prompt_agnoster_main) '
 }
@@ -90,7 +90,7 @@ prompt_git() {
     else
       ref="$DETACHED ${ref/.../}"
     fi
-    prompt_segment $color $PRIMARY_FG
+    prompt_segment $color black
     print -n " $ref"
   fi
 }
@@ -151,4 +151,5 @@ prompt_agnoster_setup() {
   zstyle ':vcs_info:git*' actionformats '%b (%a)'
 }
 
+RPROMPT="%{%F{green}%K{$PRIMARY_FG}%} $(date +'%I:%M:%S %p') %{%f%b%k%}%{%F{$PRIMARY_FG}%}"
 prompt_agnoster_setup "$@"
