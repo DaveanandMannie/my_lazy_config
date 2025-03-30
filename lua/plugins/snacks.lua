@@ -9,6 +9,7 @@ return {
     -----------------------------------------------
 
     notifier = {
+      timeout = 5000,
       border = "none",
       zindex = 100,
       ft = "markdown",
