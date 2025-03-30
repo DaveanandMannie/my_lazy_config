@@ -28,9 +28,8 @@ return {
     -----------------------------------------------
 
     picker = {
-      cycle = false,
       layouts = my_presets,
-      layout = { preset = "telescope", auto_hide = { "input" } },
+      layout = { cycle = false, preset = "telescope", auto_hide = { "input" } },
       finder = "files",
       format = "file",
       show_empty = true,
@@ -39,12 +38,12 @@ return {
       follow = true,
       supports_live = true,
       sources = {
-        explorer = { matcher = { fuzzy = true }, layout = { preset = "sidebar" } },
+        explorer = { cycle = false, matcher = { fuzzy = true }, layout = { preset = "sidebar" } },
         buffers = { layout = { preset = "vscode" } },
         lines = { main = { current = false }, layout = { preset = "vs_search" } },
         diagnostics = { layout = { preset = "vs_search" } },
         diagnostics_buffer = { layout = { preset = "vs_search" } },
-        files = {hidden = true, ignored = true}
+        files = { hidden = true, ignored = true },
       },
     },
 
