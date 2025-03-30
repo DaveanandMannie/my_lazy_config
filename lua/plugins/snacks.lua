@@ -26,6 +26,7 @@ return {
     -----------------------------------------------
     --  picker
     -----------------------------------------------
+
     picker = {
       cycle = false,
       layouts = my_presets,
@@ -43,6 +44,7 @@ return {
         lines = { main = { current = false }, layout = { preset = "vs_search" } },
         diagnostics = { layout = { preset = "vs_search" } },
         diagnostics_buffer = { layout = { preset = "vs_search" } },
+        files = {hidden = true, ignored = true}
       },
     },
 
