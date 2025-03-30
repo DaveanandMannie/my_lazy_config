@@ -40,10 +40,14 @@ return {
       sources = {
         explorer = { matcher = { fuzzy = true }, layout = { preset = "sidebar" } },
         buffers = { layout = { preset = "vscode" } },
-        lines = { main = {current = false}, layout = { preset = "search_lines" } },
+        lines = { main = { current = false }, layout = { preset = "vs_search" } },
+        diagnostics = { layout = { preset = "vs_search" } },
+        diagnostics_buffer = { layout = { preset = "vs_search" } },
       },
     },
 
+    -----------------------------------------------
+    --  dashboard
     -----------------------------------------------
 
     dashboard = {

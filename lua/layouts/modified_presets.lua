@@ -3,7 +3,7 @@ local layouts = {
   ------------------------------------------
   --  custom
   ------------------------------------------
-  search_lines = {
+  vs_search = {
     preview = false,
     layout = {
       backdrop = false,
