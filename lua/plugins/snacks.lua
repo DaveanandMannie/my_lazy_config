@@ -1,11 +1,15 @@
+local my_presets = require("layouts.modified_presets")
 return {
   "folke/snacks.nvim",
+  priority = 1000,
+  lazy = false,
   opts = {
-    --
+    -----------------------------------------------
     -- notifications
-    --
+    -----------------------------------------------
+
     notifier = {
-      border = "rounded",
+      border = "none",
       zindex = 100,
       ft = "markdown",
       style = "fancy",
@@ -17,13 +21,29 @@ return {
       },
       bo = { filetype = "snacks_notif" },
     },
-    --
-    --  animations
-    --
-    animate = { },
-    --
-    -- dashboard
-    --
+
+    -----------------------------------------------
+    --  picker
+    -----------------------------------------------
+    picker = {
+      cycle = false,
+      layouts = my_presets,
+      layout = { preset = "telescope", auto_hide = { "input" } },
+      finder = "files",
+      format = "file",
+      show_empty = true,
+      hidden = true,
+      ignored = true,
+      follow = true,
+      supports_live = true,
+      sources = {
+        explorer = { matcher = { fuzzy = true }, layout = { preset = "sidebar" } },
+        buffers = { layout = { preset = "vscode" } },
+      },
+    },
+
+    -----------------------------------------------
+
     dashboard = {
       preset = {
         header = [[
@@ -54,5 +74,29 @@ return {
       ]],
       },
     },
+  },
+
+  -----------------------------------------------
+  -- keys
+  -----------------------------------------------
+
+  -- exploerer
+  keys = {
+    {
+      "<leader>fe",
+      function()
+        Snacks.explorer({ cwd = LazyVim.root() })
+      end,
+      desc = "Explorer Snacks (root dir)",
+    },
+    {
+      "<leader>fE",
+      function()
+        Snacks.explorer()
+      end,
+      desc = "Explorer Snacks (cwd)",
+    },
+    { "<leader>e", "<leader>fe", desc = "Explorer Snacks (root dir)", remap = true },
+    { "<leader>E", "<leader>fE", desc = "Explorer Snacks (cwd)", remap = true },
   },
 }
