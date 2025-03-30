@@ -4,6 +4,7 @@
 vim.g.autoformat = false
 
 vim.g.lazyvim_python_lsp = "basedpyright"
+vim.g.lazyvim_picker = "snacks"
 
 vim.o.tabstop = 4
 vim.o.expandtab = true
