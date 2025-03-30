@@ -6,7 +6,7 @@ local os_info = require("os_info")
 if os_info.is_windows then
   vim.o.shell = "pwsh"
   vim.o.shellcmdflag =
-  "-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;"
+    "-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;"
   vim.o.shellredir = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
   vim.o.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
   vim.o.shellquote = ""
@@ -16,6 +16,19 @@ end
 -- colourscheme
 vim.cmd("colorscheme wildcharm")
 vim.api.nvim_set_hl(0, "Normal", { bg = "#18131e" })
+vim.api.nvim_set_hl(0, "VertSplit", {
+  fg = "NONE", -- Set the foreground (border color)
+  bg = "NONE", -- Make the background transparent
+  ctermbg = 0, -- For terminal background color
+  ctermfg = 15, -- For terminal foreground color
+})
+vim.api.nvim_set_hl(0, "Pmenu", {
+
+  fg = "NONE", -- Set the foreground (border color)
+  bg = "NONE", -- Make the background transparent
+  ctermbg = 0, -- For terminal background color
+  ctermfg = 15, -- For terminal foreground color
+})
 
 -- clipboard
 
