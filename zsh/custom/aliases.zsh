@@ -5,3 +5,5 @@ alias lla='ls -la'
 
 
 alias fd='fdfind'
+
+alias sudo-shell='sudo -E zsh'

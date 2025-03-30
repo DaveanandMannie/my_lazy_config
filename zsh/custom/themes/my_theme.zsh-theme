@@ -16,6 +16,8 @@ GREY="#303030"
 VIOLET="#d183e8"
 BLACK='#080808'
 CURRENT_BG='NONE'
+SUPER_USER_COLOUR='#f968f7'
+USER_COLOUR='#5d009f'
 if [[ -z "$PRIMARY_FG" ]]; then
 	PRIMARY_FG=$VIOLET
 fi
@@ -25,9 +27,10 @@ SEGMENT_SEPARATOR=""
 PLUSMINUS="󰃻"
 BRANCH="󰘬"
 DETACHED="\u27a6"
-CROSS="\u2718"
-LIGHTNING="\u26a1"
+ERROR=" "
+SUPER_USER=" "
 GEAR="\u2699"
+CUSTOM_PROMPT="   󱞩  "
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -53,6 +56,7 @@ prompt_end() {
     print -n "%{%k%}"
   fi
   print -n "%{%f%}"
+  # print -n "$CUSTOM_PROMPT"
   CURRENT_BG=''
 }
 
@@ -65,7 +69,7 @@ prompt_context() {
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CONNECTION" ]]; then
     prompt_segment NONE $PRIMARY_FG ""
-    prompt_segment $PRIMARY_FG green " %(!.%{%F{yellow}%}.)$user@%m "
+    prompt_segment $PRIMARY_FG $USER_COLOUR " %(!.%{%F{$SUPER_USER_COLOUR}%}.)$user@%m "
   fi
   PROMPT='%{%f%b%k%}$(prompt_agnoster_main) '
 }
@@ -107,11 +111,11 @@ prompt_dir() {
 prompt_status() {
   local symbols
   symbols=()
-  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}$CROSS"
-  [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}$LIGHTNING"
+  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%} $RETVAL $ERROR"
+  [[ $UID -eq 0 ]] && symbols+="%{%F{$SUPER_USER_COLOUR}%}$SUPER_USER"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}$GEAR"
 
-  [[ -n "$symbols" ]] && prompt_segment $PRIMARY_FG default " $symbols "
+  [[ -n "$symbols" ]] && prompt_segment defualt default " $symbols "
 }
 
 # Display current virtual environment
@@ -134,7 +138,9 @@ prompt_agnoster_main() {
 
 prompt_agnoster_precmd() {
   vcs_info
-  PROMPT='%{%f%b%k%}$(prompt_agnoster_main) '
+  RPROMPT="%{%F{$BLACK}%K{$PRIMARY_FG}%} $(date +'%A, %B %d, %Y %I:%M:%S %p') %{%f%b%k%}%{%F{$PRIMARY_FG}%}"
+  PROMPT='%{%f%b%k%}$(prompt_agnoster_main)
+  $CUSTOM_PROMPT'
 }
 
 prompt_agnoster_setup() {
@@ -151,5 +157,4 @@ prompt_agnoster_setup() {
   zstyle ':vcs_info:git*' actionformats '%b (%a)'
 }
 
-RPROMPT="%{%F{green}%K{$PRIMARY_FG}%} $(date +'%I:%M:%S %p') %{%f%b%k%}%{%F{$PRIMARY_FG}%}"
 prompt_agnoster_setup "$@"
