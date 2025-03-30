@@ -39,6 +39,7 @@ return {
       sources = {
         explorer = { matcher = { fuzzy = true }, layout = { preset = "sidebar" } },
         buffers = { layout = { preset = "vscode" } },
+        lines = { main = {current = false}, layout = { preset = "search_lines" } },
       },
     },
 
