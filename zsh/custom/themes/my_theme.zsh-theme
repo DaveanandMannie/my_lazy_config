@@ -16,7 +16,7 @@ GREY="#303030"
 VIOLET="#d183e8"
 BLACK='#080808'
 CURRENT_BG='NONE'
-SUPER_USER_COLOUR='#f968f7'
+SUPER_USER_COLOUR='#970000'
 USER_COLOUR='#5d009f'
 if [[ -z "$PRIMARY_FG" ]]; then
 	PRIMARY_FG=$VIOLET
@@ -121,7 +121,7 @@ prompt_status() {
 # Display current virtual environment
 prompt_virtualenv() {
   if [[ -n $VIRTUAL_ENV ]]; then
-    color=cyan
+    color='#035909'
     prompt_segment $color $PRIMARY_FG
     print -Pn " $(basename $VIRTUAL_ENV) "
   fi

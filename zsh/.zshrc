@@ -60,8 +60,8 @@ ZSH_CUSTOM=/home/daveanand/.config/nvim/zsh/custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -83,3 +83,5 @@ fi
 # export ARCHFLAGS="-arch $(uname -m)"
 
 export PATH="$PATH:/usr/bin"
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=015,bold"
