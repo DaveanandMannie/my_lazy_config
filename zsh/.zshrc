@@ -26,8 +26,20 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-# Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
+function set_title() {
+  # Check if debian_chroot exists and is readable
+  if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    local chroot="${debian_chroot}"
+  else
+    local chroot=""
+  fi
+  
+  # Set the terminal title only
+  print -Pn "\e]0;${chroot:+($chroot)}%n@%m: %~\a"
+}
+precmd_functions+=(set_title)
+
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
