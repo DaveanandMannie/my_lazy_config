@@ -2,7 +2,9 @@
 require("config.lazy")
 local os_info = require("os_info")
 
+-------------------------------------------------------
 --  powershell so my shit compiles with zig when i install
+-------------------------------------------------------
 if os_info.is_windows then
   vim.o.shell = "pwsh"
   vim.o.shellcmdflag =
@@ -13,25 +15,32 @@ if os_info.is_windows then
   vim.o.shellxquote = ""
 end
 
+-------------------------------------------------------
 -- colourscheme
+-------------------------------------------------------
 vim.cmd("colorscheme wildcharm")
 vim.api.nvim_set_hl(0, "Normal", { bg = "#18131e" })
+-- for  boarders
 vim.api.nvim_set_hl(0, "VertSplit", {
-  fg = "NONE", -- Set the foreground (border color)
-  bg = "NONE", -- Make the background transparent
-  ctermbg = 0, -- For terminal background color
-  ctermfg = 15, -- For terminal foreground color
+  fg = "#E858F5",
+  bg = "#1A1A1A",
+  ctermbg = 0,
+  ctermfg = 15,
 })
+-- for  menus
 vim.api.nvim_set_hl(0, "Pmenu", {
-
-  fg = "NONE", -- Set the foreground (border color)
-  bg = "NONE", -- Make the background transparent
-  ctermbg = 0, -- For terminal background color
-  ctermfg = 15, -- For terminal foreground color
+  fg = "NONE",
+  bg = "#1A1A1A",
+  ctermbg = 0,
+  ctermfg = 15,
 })
 
--- clipboard
+-- for git
+vim.api.nvim_set_hl(0, "SnacksPickerGitStatusUntracked", { default = false, link = "BlinkCmpMenuSelection" })
 
+-------------------------------------------------------
+-- clipboard
+-------------------------------------------------------
 if vim.fn.has("wsl") == 1 then
   -- WSL-specific clipboard configuration
   vim.cmd([[
