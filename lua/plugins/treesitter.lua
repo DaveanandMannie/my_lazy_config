@@ -1,5 +1,5 @@
 local os_info = require("os_info")
-if os_info.is_linux then
+if not os_info.is_linux then
   require("nvim-treesitter.install").compilers = { "zig" }
 end
 
