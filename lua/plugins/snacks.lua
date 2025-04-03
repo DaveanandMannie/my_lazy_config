@@ -4,6 +4,13 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
+
+    lazygit = {
+      configure = true,
+      config = {
+        nerdFontsVersion= "3"
+      }
+    },
     -----------------------------------------------
     -- notifications
     -----------------------------------------------
@@ -30,20 +37,29 @@ return {
     picker = {
       layouts = my_presets,
       layout = { cycle = false, preset = "telescope", auto_hide = { "input" } },
-      finder = "files",
-      format = "file",
       show_empty = true,
       hidden = true,
       ignored = true,
       follow = true,
       supports_live = true,
+      -- TODO: move to different dir
+      formatters = {
+        file = { truncate = 130 },
+      },
       sources = {
-        explorer = { cycle = false, matcher = { fuzzy = true }, layout = { preset = "sidebar" } },
+        explorer = { cycle = false, layout = { preset = "sidebar" } },
         buffers = { layout = { preset = "vscode" } },
         lines = { main = { current = false }, layout = { preset = "vs_search" } },
         diagnostics = { layout = { preset = "vs_search" } },
         diagnostics_buffer = { layout = { preset = "vs_search" } },
-        files = { hidden = true, ignored = true },
+        git_status = { ignored = false },
+        grep = { ignored = false, hidden = false, exclude = { "*.po", " *.pot" } },
+        files = {
+          hidden = true,
+          ignored = true,
+          exclude = { "venvs/*", "*.pyc", "*.po" },
+          layout = { preset = "file_telescope" },
+        },
       },
     },
 
