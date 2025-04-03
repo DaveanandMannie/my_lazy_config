@@ -64,7 +64,7 @@ precmd_functions+=(set_title)
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/home/daveanand/.config/nvim/zsh/custom
+ZSH_CUSTOM=~/.config/nvim/zsh/custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -95,5 +95,6 @@ fi
 # export ARCHFLAGS="-arch $(uname -m)"
 
 export PATH="$PATH:/usr/bin"
+export LESS="-R"
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=015,bold"
