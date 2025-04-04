@@ -8,7 +8,9 @@ return {
     lazygit = {
       configure = true,
       config = {
+        gui={
         nerdFontsVersion= "3"
+          }
       }
     },
     -----------------------------------------------
