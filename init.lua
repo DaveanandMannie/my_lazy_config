@@ -57,20 +57,4 @@ if vim.fn.has("wsl") == 1 then
     \   'cache_enabled': 0,
     \ }
   ]])
-elseif vim.fn.has("unix") == 1 then
-  -- Native Linux-specific clipboard configuration
-  vim.cmd([[
-    let g:clipboard = {
-    \   'name': 'LinuxClipboard',
-    \   'copy': {
-    \      '+': 'xclip -selection clipboard',
-    \      '*': 'xclip -selection primary',
-    \    },
-    \   'paste': {
-    \      '+': 'xclip -selection clipboard -o',
-    \      '*': 'xclip -selection primary -o',
-    \   },
-    \   'cache_enabled': 0,
-    \ }
-  ]])
 end
