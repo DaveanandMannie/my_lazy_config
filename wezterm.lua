@@ -8,7 +8,8 @@ config.default_prog = { "pwsh" }
 
 --styles
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
-config.font = wezterm.font("JetBrains Mono", { weight = "Bold" })
+config.font = wezterm.font("JetBrainsMono NF", { weight = "Bold" , style = "Italic"})
+-- config.font_size = 14
 config.color_scheme = "Sakura"
 config.window_padding = {
   left = "0.5cell",
