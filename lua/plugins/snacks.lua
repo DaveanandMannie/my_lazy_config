@@ -8,10 +8,10 @@ return {
     lazygit = {
       configure = true,
       config = {
-        gui={
-        nerdFontsVersion= "3"
-          }
-      }
+        gui = {
+          nerdFontsVersion = "3",
+        },
+      },
     },
     -----------------------------------------------
     -- notifications
@@ -50,12 +50,14 @@ return {
       },
       sources = {
         explorer = { cycle = false, layout = { preset = "sidebar" } },
-        buffers = { layout = { preset = "vscode" } },
+        buffers = { layout = { preset = "vs_search" } },
         lines = { main = { current = false }, layout = { preset = "vs_search" } },
         diagnostics = { layout = { preset = "vs_search" } },
         diagnostics_buffer = { layout = { preset = "vs_search" } },
         git_status = { ignored = false },
         grep = { ignored = false, hidden = false, exclude = { "*.po", " *.pot" } },
+        todo_comments = { ignored = false, hidden = false },
+        lsp_symbols = {layout = {preset = "lsp_telescope" }},
         files = {
           hidden = true,
           ignored = true,

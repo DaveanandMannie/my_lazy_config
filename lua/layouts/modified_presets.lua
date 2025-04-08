@@ -3,6 +3,32 @@ local layouts = {
   ------------------------------------------
   --  custom
   ------------------------------------------
+  ---
+  lsp_telescope = {
+    reverse = false,
+    layout = {
+      box = "horizontal",
+      backdrop = false,
+      width = 0.8,
+      height = 0.9,
+      border = "none",
+      {
+        box = "vertical",
+        { win = "list", title = " Results ", title_pos = "center", border = "rounded" },
+        { win = "input", height = 1, border = "rounded", title = "{title} {live}", title_pos = "left" },
+      },
+      {
+        win = "preview",
+        title = "{preview:Preview}",
+        width = 0.7,
+        border = "rounded",
+        title_pos = "center",
+      },
+    },
+  },
+
+
+
   vs_search = {
     preview = false,
     layout = {
