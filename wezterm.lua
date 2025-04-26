@@ -9,7 +9,7 @@ config.default_prog = { "pwsh" }
 --styles
 config.harfbuzz_features = { "calt=1", "clig=1", "liga=1" }
 config.font = wezterm.font("JetBrainsMono NF", { weight = "Bold" , style = "Italic"})
-config.font_size = 14
+-- config.font_size = 14
 config.color_scheme = "Sakura"
 config.window_padding = {
   left = "0.5cell",
