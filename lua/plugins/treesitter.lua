@@ -17,15 +17,12 @@ return {
         "ninja",
         "rst",
         "lua",
-        -- from extras -> go
-        "go",
-        "gomod",
-        "gowork",
-        "gosum",
         --
         "toml",
         "json",
         "html",
+        --
+        "ruby"
       },
     },
   },
