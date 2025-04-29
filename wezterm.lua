@@ -17,6 +17,12 @@ config.window_padding = {
   top = "0cell",
   bottom = "0cell",
 }
+-- pane
+config.colors = { split = '#E858F5' }
+config.inactive_pane_hsb = {
+  saturation = 0.7,
+  brightness = 0.8,
+}
 
 --tab bar
 config.hide_tab_bar_if_only_one_tab = true
