@@ -5,6 +5,7 @@ return {
       -- python = { "ruff" },
       python = { "black" },
       javascript = { "biome" },
+      go =  {'goimports', 'gofumpt'}
     },
   },
   dependencies = {

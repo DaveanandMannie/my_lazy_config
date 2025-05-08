@@ -22,7 +22,12 @@ return {
         "json",
         "html",
         --
-        "ruby"
+        "ruby",
+        --
+        "go",
+        "gomod",
+        "gowork",
+        "gosum",
       },
     },
   },

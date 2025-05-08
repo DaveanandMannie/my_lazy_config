@@ -2,15 +2,23 @@ return {
   "williamboman/mason.nvim",
   opts = {
     ensure_installed = {
+      -- python
       "basedpyright",
-      "biome",
-      "black",
-      "lemminx",
-      "lua-language-server",
-      "ruby-lsp",
       "ruff",
-      "shfmt",
+      -- js, json, xml, all front end stuff
+      "black",
+      "biome",
+      "lemminx",
+      -- lua
       "stylua",
+      "lua-language-server",
+      --ruby
+      "ruby-lsp",
+      -- bash
+      "shfmt",
+      -- go
+      "goimports",
+      "gofumpt"
     },
   },
 }
