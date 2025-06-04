@@ -5,6 +5,7 @@ return {
     keywords = {
       DEBT = { icon = "󰢖 ", color = "debt" },
       TODO = { icon = "󱩽 " },
+      TEMPFIX = { icon = " ", color = "error" },
     },
     colors = { debt = { "DiffDelete" } },
   },
