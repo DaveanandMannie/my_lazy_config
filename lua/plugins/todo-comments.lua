@@ -6,6 +6,7 @@ return {
       DEBT = { icon = "󰢖 ", color = "debt" },
       TODO = { icon = "󱩽 " },
       TEMPFIX = { icon = " ", color = "error" },
+      REMOVE = { icon = "󰆇 ", color = "error" },
     },
     colors = { debt = { "DiffDelete" } },
   },
