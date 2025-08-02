@@ -99,11 +99,5 @@ export WEZTERM_CONFIG_FILE=~/.config/nvim/wezterm.lua
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=015,bold"
 # ruby environement manager
 eval "$(~/.local/repos/rbenv/bin/rbenv init - --no-rehash zsh)"
-# go lang
-export GOPATH=$HOME/workspace/go-tools
-export GOBIN=$GOPATH/bin
-export PATH="$GOBIN:/usr/local/go/bin:$PATH"
-# wezterm
-export WEZTERM_CONFIG_FILE=$HOME/.config/nvim/config_files/wezterm.lua
-# Message of the day
+# message of the day
 ~/.config/nvim/zsh/motd.sh
