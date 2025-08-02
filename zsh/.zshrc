@@ -94,9 +94,14 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
-export PATH="$PATH:/usr/bin"
 export LESS="-R"
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=015,bold"
 # ruby environement manager
 eval "$(~/.local/repos/rbenv/bin/rbenv init - --no-rehash zsh)"
+# go lang
+export GOPATH=$HOME/workspace/go-tools
+export GOBIN=$GOPATH/bin
+export PATH="$GOBIN:/usr/local/go/bin:$PATH"
+# Message of the day
+~/.config/nvim/zsh/motd.sh

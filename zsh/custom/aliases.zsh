@@ -10,7 +10,7 @@ alias sudo-shell='sudo -E zsh'
 
 # [Development]
 # [Odoo]
-alias erp-dev='cd ~/workspace/pg/erp/'
+alias erp-dev='cd ~/workspace/pg/erp_legacy/'
 alias erp-dev-server='erp-dev && source venvs/odoo17/bin/activate && cd odoo && python3 odoo-bin -c ../.odoorc --dev all'
 
 # [portal]
