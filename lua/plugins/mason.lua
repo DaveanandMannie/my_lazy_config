@@ -7,7 +7,7 @@ return {
       "ruff",
       -- js, json, xml, all front end stuff
       "black",
-      "biome",
+      -- "biome",
       "lemminx",
       -- lua
       "stylua",
