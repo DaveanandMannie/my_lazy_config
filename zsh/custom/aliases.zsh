@@ -9,7 +9,11 @@ alias fd='fdfind'
 alias sudo-shell='sudo -E zsh'
 
 # [Development]
-alias wezterm='/mnt/c/Users/DaveanandMannie/scoop/apps/wezterm/current/wezterm.exe'
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null; then
+  alias wezterm='/mnt/c/Users/DaveanandMannie/scoop/apps/wezterm/current/wezterm.exe'
+else
+  alias wezterm='wezterm'  # Or point to native binary if needed
+fi
 # [Odoo]
 alias erp-dev='cd ~/workspace/pg/erp/'
 alias erp-dev-server='erp-dev && source venvs/odoo18/bin/activate && cd odoo && python3 odoo-bin -c ../odoo.conf --dev all'
