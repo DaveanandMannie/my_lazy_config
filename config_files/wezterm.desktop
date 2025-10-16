@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=WezTerm
+Comment=Wez's Terminal Emulator
+Exec=wezterm --config-file /home/daveanand/.config/nvim/config_files/wezterm.lua
+Icon=/home/daveanand/.local/repos/wezterm/assets/icon/terminal.png
+Terminal=false
+Type=Application
+Categories=Utility;TerminalEmulator;
+

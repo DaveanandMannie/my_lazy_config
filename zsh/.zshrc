@@ -95,7 +95,7 @@ fi
 # export ARCHFLAGS="-arch $(uname -m)"
 
 export LESS="-R"
-export WEZTERM_CONFIG_FILE=~/.config/nvim/wezterm.lua
+export WEZTERM_CONFIG_FILE=~/.config/nvim/config_files/wezterm.lua
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=015,bold"
 # ruby environement manager
 eval "$(~/.local/repos/rbenv/bin/rbenv init - --no-rehash zsh)"
