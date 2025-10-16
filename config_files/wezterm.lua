@@ -2,9 +2,11 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 -- workspace dir default
-config.default_cwd = os.getenv("HOMEPATH") .. "/workspace"
+config.default_cwd = os.getenv("HOMEPATH") or os.getenv("HOME").. "/workspace"
 -- default term prog can be changed with cli args
+if os.getenv("pwsh") then
 config.default_prog = { "pwsh" }
+end
 
 --styles
 config.harfbuzz_features = { "calt=1", "clig=1", "liga=1" }
