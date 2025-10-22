@@ -1,0 +1,59 @@
+AllCops:
+  TargetRubyVersion: 3.4
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+
+Layout/LineLength:
+  Max: 100
+
+Layout/IndentationWidth:
+  Width: 2
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+
+Naming/VariableName:
+  EnforcedStyle: snake_case
+
+Naming/MethodName:
+  EnforcedStyle: snake_case
+
+Naming/ClassAndModuleCamelCase:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/RedundantBegin:
+  Enabled: true
+
+Style/GuardClause:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/ClassLength:
+  Max: 200
+
+Metrics/BlockLength:
+  Max: 25
+
+Metrics/AbcSize:
+  Max: 15

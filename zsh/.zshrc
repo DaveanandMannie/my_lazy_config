@@ -102,3 +102,11 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=015,bold"
 eval "$(~/.local/repos/rbenv/bin/rbenv init - --no-rehash zsh)"
 # message of the day
 ~/.config/nvim/zsh/motd.sh
+
+# rust 
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# go lang
+export GOPATH=$HOME/workspace/go-tools
+export GOBIN=$GOPATH/bin
+export PATH="$GOBIN:/usr/local/go/bin:$PATH"

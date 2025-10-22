@@ -5,10 +5,13 @@ return {
       -- python
       "basedpyright",
       "ruff",
-      -- js, json, xml, all front end stuff
       "black",
-      -- "biome",
+      -- js, json, xml, all front end stuff
+      "vtsls",
+      "biome",
       "lemminx",
+      "html-lsp",
+      -- "css-lsp",
       -- lua
       "stylua",
       "lua-language-server",
