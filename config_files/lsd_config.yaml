@@ -1,5 +1,5 @@
 header: true
-layout: oneline
+layout: tree
 recursion:
   enabled: true
   depth: 1

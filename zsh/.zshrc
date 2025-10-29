@@ -74,6 +74,7 @@ ZSH_CUSTOM=~/.config/nvim/zsh/custom
 plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
+    direnv
 )
 source $ZSH/oh-my-zsh.sh
 
