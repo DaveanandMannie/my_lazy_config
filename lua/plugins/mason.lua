@@ -16,7 +16,6 @@ return {
       "stylua",
       "lua-language-server",
       --ruby
-      "ruby-lsp",
       -- bash
       "shfmt",
       -- go

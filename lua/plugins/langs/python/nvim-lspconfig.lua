@@ -4,7 +4,7 @@ local config_path
 
 -- Determine the config path based on the OS
 if os_info.is_linux then
-  config_path = os.getenv("HOME") .. "/.config/nvim/ruff.toml"
+  config_path = os.getenv("HOME") .. "/.config/nvim/config_files/ruff.toml"
 elseif os_info.is_windows then
   config_path = os.getenv("LOCALAPPDATA") .. "\\nvim\\ruff.toml"
 end

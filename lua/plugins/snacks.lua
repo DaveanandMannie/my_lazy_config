@@ -61,7 +61,7 @@ return {
         files = {
           hidden = true,
           ignored = true,
-          exclude = { "venvs/*", "*.pyc", "*.po" },
+          exclude = { "venvs/*", "*.pyc", "*.po" ,"node_modules/*", "bundle/*"},
           layout = { preset = "file_telescope" },
         },
       },

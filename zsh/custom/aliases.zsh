@@ -25,3 +25,5 @@ alias erp-dev-test='cd ~/workspace/pg/erp && source venvs/odoo18/bin/activate &&
 alias erp-portal-server='erp-dev && source venvs/odoo17/bin/activate && cd odoo && python3 odoo-bin -c ../.portalrc --dev all'
 alias portal-dev='cd ~/workspace/pg/portal/'
 
+alias lg='lazygit'
+alias ..nvim="../ && nvim"

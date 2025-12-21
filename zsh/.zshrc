@@ -110,3 +110,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH=$HOME/workspace/go-tools
 export GOBIN=$GOPATH/bin
 export PATH="$GOBIN:/usr/local/go/bin:$PATH"
+
+# node / js / nvm
+export NVM_DIR="$HOME/workspace/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
